@@ -1,0 +1,196 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://www.shutterstock.com/image-photo/circuito-de-valencia-cheste-ricardo-260nw-2184702049.jpg");
+}
+
+.container {
+  max-width: 1000px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+}
+
+.animated-word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.letter {
+  transition: 0.4s;
+  transform: translateX(0);
+  cursor: grab;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px; /* Aumentar el tamaño de las letras */
+}
+
+.letter:hover {
+  transform: translateX(-1rem);
+  background: -webkit-linear-gradient(120deg, black, black); /* Cambiar a gradiente negro */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black; /* Cambiar el color a negro */
+}
+
+
+
+table {
+  
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: black;
+  color-interpolation: sRGB;
+}
+
+th,
+td {
+  border-color: black 5px;
+  padding: 10px 20px;
+  
+}
+
+th {
+  text-align: right;
+  font-family: 'Pacifico', cursive;
+  color: #8e44ad;
+
+}
+
+.board-game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 520px;
+  margin: 2rem auto; 
+  margin-bottom: 1rem;
+}
+
+
+figure,
+figure img {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+  position: center;
+  top: -400px;
+  left: -450px;
+  transition: all ease 0.5s;
+  transform-style: preserve-3d;
+  transform: perspective(600px) rotateY(0deg);
+  cursor: pointer;
+  box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.6);
+}
+
+figure::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  transition: 0.3s all ease;
+}
+
+figure:hover:after {
+  background: rgba(255, 255, 255, 0.137);
+}
+
+figure.opened {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+figure .back {
+  display: block;
+  backface-visibility: hidden;
+}
+
+figure .searched-image {
+  position: absolute;
+  top: 0;
+  transform: perspective(600px) rotateY(180deg);
+  backface-visibility: hidden;
+  height: 100%;
+  overflow: hidden;
+}
+
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 10px 20px;
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
+  background-color: #2980b9;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1c638f;
+}
+font-size: 14px;
+}
+
+.container2 {
+  position: center;
+  bottom: 10px;
+  right: 20px;
+  font-size: 18px;
+  color: blueviolet;
+  top: -900px;
+}
+
+.container2 div {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.container2 p {
+  margin: 0;
+}
+footer {
+  font-family:'Pacifico', cursive ;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
